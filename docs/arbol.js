@@ -45,12 +45,8 @@ const arbol={
                   hijo:{ 
                     pregunta:"¿Qué subtema buscas?", 
                     opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
-                      {titulo:"Operaciones", 
-                       hijo:{fin:true}
-                      },
+                     {titulo:"Propiedades", hijo:{fin:true}},
+                     {titulo:"Operaciones", hijo:{fin:true}},
                     ]  
                   }
                 },
@@ -58,9 +54,7 @@ const arbol={
                   hijo:{ 
                     pregunta:"¿Qué subtema buscas?", 
                     opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
+                     {titulo:"Propiedades", hijo:{fin:true}},
                     ]  
                   }
                 },
@@ -68,61 +62,18 @@ const arbol={
                   hijo:{ 
                     pregunta:"¿Qué subtema buscas?", 
                     opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
-                      {titulo:"Simplificación", 
-                       hijo:{fin:true}
-                      },
+                     {titulo:"Propiedades", hijo:{fin:true}},
+                     {titulo:"Simplificación", hijo:{fin:true}},
                     ]  
                   }
                 }
               ]
-
             }
           },
           {titulo:"Lógica", 
             hijo:{
               pregunta:"¿Qué tema buscas?",
-              opc:[
-                {titulo:"Fracciones", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
-                      {titulo:"Operaciones", 
-                       hijo:{fin:true}
-                      },
-                    ]  
-                  }
-                },
-                {titulo:"Potencias", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
-                    ]  
-                  }
-                },
-                {titulo:"Radicales", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", 
-                       hijo:{fin:true}
-                      },
-                      {titulo:"Simplificación", 
-                       hijo:{fin:true}
-                      },
-                    ]  
-                  }
-                }
-              ]
-
+              opc:[]
             }
           },
         ]
@@ -174,11 +125,11 @@ async function mResultados(){
   document.getElementById("pregunta").textContent="Resultados Hallados: ";
   document.getElementById("opc").innerHTML="Cargando Archivos...";
 
-  const resp=await fetch("http://localhost:3000/api/contenido?"+new URLSearchParams(filtro));
+  const resp=await fetch("https://academic-search-gzmp.onrender.com/api/contenido?"+new URLSearchParams(elec));
   const contenido=await resp.json();
   document.getElementById("opc").innerHTML="";
 
-  recursos.forEach(c=>{
+  contenido.forEach(c=>{
     const item=document.createElement("a");
     item.href=c.link;
     item.textContent=c.titulo;

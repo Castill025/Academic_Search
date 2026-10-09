@@ -7,6 +7,11 @@ let preguntasfalt= Object.keys(preguntasDisponibles);
 let datosfil= [...datos];
 let historial= [];
 
+function obtenerOpcDispo(clave) {
+  const valoresUnicos = [...new Set(datosfil.map(item => item[clave]))];
+  return valoresUnicos;
+}
+
 function renderPregunta() {
     if (preguntasfalt.length === 0 || datosfil.length <=1){
         document.getElementById("contpreguntas").style.display= "none";

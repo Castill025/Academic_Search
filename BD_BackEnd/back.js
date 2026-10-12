@@ -7,11 +7,11 @@ const mibd=new lsql("DB_Proyecto.db");
 
 
 app.get("/api/Contenido",(req,res)=>{
-  const{area,materia,tema,subtema}=req.query;
+  const{nivel,area,materia,tema,subtema}=req.query;
 
   const resultados=mibd.prepare(
-    "SELECT *FROM Contenido WHERE area=? AND materia=? AND tema=? AND subtema=?"
-  ).all(area,materia,tema,subtema);
+    "SELECT *FROM Contenido WHERE nivel=? AND area=? AND materia=? AND tema=? AND subtema=?"
+  ).all(nivel,area,materia,tema,subtema);
 
   res.json(resultados);
 });

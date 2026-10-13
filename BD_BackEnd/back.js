@@ -3,7 +3,7 @@ const lsql=require("better-sqlite3");
 const cors=require("cors");
 const app=lexpr();
 app.use(cors());
-const mibd=new lsql("DB_Proyecto.db");
+const mibd=new lsql("DB_Buscador.db");
 
 
 app.get("/api/Contenido",(req,res)=>{

@@ -1,89 +1,13 @@
-const arbol={
-  pregunta:"¿Qué área te interesa?",
-  opc:[
-    {titulo:"Ciencias",
-      hijo:{
-        pregunta:"¿Qué materia buscas?",
-        opc:[
-          {titulo:"Biología",
-            hijo:{
-              pregunta:"¿Qué tema buscas?",
-              opc:[
-                {titulo:"Genética", 
-                  hijo:{
-                    pregunta:"¿Qué subtema buscas?",
-                    opc:[
-                      {titulo:"Herencia", 
-                        hijo:{fin:true}
-                      },
-                    ]
-                  }
-                },
-                {titulo:"Ecología", 
-                  hijo:{fin:true}},
-              ]
-            }
-          },
-          {titulo:"Química", 
-            hijo:{
-              pregunta:"¿Qué tema buscas?",
-              opc:[]
-            }
-          },
+const arbolPrincipal={
+        pregunta: "¿Qué nivel deseas?",
+        opc: [
+          { titulo: "Colegio", hijo: arbolColegio },
+          { titulo: "Universidad", hijo: arbolU },
         ]
-      }
-    },
-    {titulo:"Matemáticas", 
-      hijo:{
-        pregunta:"¿Qué materia buscas?",
-        opc:[
-          {titulo:"Aritmética", 
-            hijo:{
-              pregunta:"¿Qué tema buscas?",
-              opc:[
-                {titulo:"Fracciones", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", hijo:{fin:true}},
-                     {titulo:"Operaciones", hijo:{fin:true}},
-                    ]  
-                  }
-                },
-                {titulo:"Potencias", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", hijo:{fin:true}},
-                    ]  
-                  }
-                },
-                {titulo:"Radicales", 
-                  hijo:{ 
-                    pregunta:"¿Qué subtema buscas?", 
-                    opc:[
-                     {titulo:"Propiedades", hijo:{fin:true}},
-                     {titulo:"Simplificación", hijo:{fin:true}},
-                    ]  
-                  }
-                }
-              ]
-            }
-          },
-          {titulo:"Lógica", 
-            hijo:{
-              pregunta:"¿Qué tema buscas?",
-              opc:[]
-            }
-          },
-        ]
-      }
-    },
-  ]
-};
+      };
 
-const niveles=["disciplina","rama","tema","subtema"];
-let hist=[arbol];
+const niveles=["nivel", "disciplina","rama","tema","subtema"];
+let hist=[arbolPrincipal];
 let elec={};
 
 function nActual(){

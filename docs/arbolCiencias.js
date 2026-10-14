@@ -10,6 +10,16 @@ const arbolCiencias = {
               pregunta: "¿Qué subtema buscas?",
               opc: [
                 { titulo: "Orgánulos Celulares", hijo: { fin: true } },
+                { titulo: "Teoría Celular", hijo: { fin: true } },
+              ]
+            }
+          },
+          { titulo: "Genética", 
+            hijo: {
+              pregunta: "¿Qué subtema buscas?",
+              opc: [
+                { titulo: "Genética Mendeliana", hijo: { fin: true } },
+                { titulo: "ADN", hijo: { fin: true } },
               ]
             }
           },

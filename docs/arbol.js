@@ -6,7 +6,7 @@ const arbolPrincipal={
         ]
       };
 
-const niveles=["nivel", "disciplina","rama","tema","subtema"];
+const niveles=["nivel", "disciplina","rama","tema","subtema", "tipo_doc", "link"];
 let hist=[arbolPrincipal];
 let elec={};
 

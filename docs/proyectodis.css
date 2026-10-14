@@ -46,6 +46,7 @@ a{ color: var(--verde); }
 #opc button{
   align-items: center;
   justify-content: center;
+  display: flex;
   padding: 16px 28px;
   font: inherit;
   font-weight: 600;
@@ -97,6 +98,24 @@ a{ color: var(--verde); }
 #opc{
   display: flex;
   align-items: flex-end;
+}
+
+.btn_menu{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 16px 28px;
+  font: inherit;
+  font-weight: 600;
+  color: #596498;
+  text-decoration: none;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(89,100,152,.08),
+              0 8px 22px rgba(89,100,152,.1);
+  transition: transform .2s, box-shadow .2s, border-color .2s; 
 }
 
 body{

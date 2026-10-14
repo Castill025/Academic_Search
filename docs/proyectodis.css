@@ -61,3 +61,29 @@ body{
     bottom: 20px;
     left: 20px;
 }
+
+#inicio {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#subtitulo {
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+}
+
+#comenzarBtn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#contenidoArbol {
+  display: none;
+}

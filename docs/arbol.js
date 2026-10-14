@@ -62,4 +62,8 @@ async function mResultados(){
   });
 }
 
-mNodo();
+document.getElementById("comenzarBtn").onclick = () => {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("contenidoArbol").style.display = "block";
+  mNodo();
+};

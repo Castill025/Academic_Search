@@ -57,24 +57,24 @@ h1, h2, h3 {
   cursor: pointer;
   font-size: 25px; 
   margin-top: 99px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: none;
   padding: 20px 80px 50px;
-  margin-left: 20px;
 }
 
 #opc{
   display: flex;
   align-items: center;
 }
+
 #pregunta{
-    font-size: 45px;
-    text-align: center;
-    color:  #2B3558;
-    margin-top: 99px;
-    margin-bottom: 40px;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
+  font-size: 45px;
+  text-align: center;
+  color: #596498;
+  margin-top: 99px;
+  margin-bottom: 40px;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
 }
 
 #retro{

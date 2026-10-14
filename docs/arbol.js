@@ -63,7 +63,7 @@ async function mResultados(){
     const item=document.createElement("a");
     item.href=c.link;
     item.textContent=c.titulo;
-    item.target="_blank";
+    item.target="_blank"; 
     document.getElementById("opc").appendChild(item);
   });
 }

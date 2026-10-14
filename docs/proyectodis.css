@@ -31,11 +31,52 @@
 }
 
 body{
-    background-color: aliceblue;
     justify-content: center;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background: #EAF3F6;
+}
+.fondo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
 
+.mancha {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+}
+.verde {
+  width: 420px;
+  height: 420px;
+  background: #9BE3B4;
+  left: -100px;
+  top: 60px;
+}
+
+.lila {
+  width: 380px;
+  height: 380px;
+  background: #C3CCEE;
+  right: -60px;
+  top: 20px;
+}
+
+.azul {
+  width: 340px;
+  height: 340px;
+  background: #A9D4F0;
+  left: 40%;
+  bottom: 80px;
+}
+
+.contenido {
+  position: relative;
 }
 
 #pregunta{

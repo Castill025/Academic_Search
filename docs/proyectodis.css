@@ -44,7 +44,6 @@ p{ color: var(--texto-suave); }
 a{ color: var(--verde); }
 
 #opc button{
-  display: center;
   align-items: center;
   justify-content: center;
   padding: 16px 28px;
@@ -161,6 +160,8 @@ body{
 
 .contenido {
   position: relative;
+  font-family: 'Fraunces', serif;
+
 }
 .intro {
   display: flex;

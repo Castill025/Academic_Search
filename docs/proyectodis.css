@@ -58,6 +58,8 @@ h1, h2, h3 {
   font-size: 25px; 
   margin-top: 99px;
   margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   border: none;
   padding: 20px 80px 50px;
 }

@@ -254,7 +254,8 @@ body{
 }
 
 #contenidoArbol {
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 #footer {

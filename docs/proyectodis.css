@@ -11,6 +11,38 @@
     padding: 25px;
 }
 
+:root {
+  --azul: #596498;
+  --texto: #2B3558;
+  --texto-suave: #5F6B8C;
+  --texto-claro: #8a93b3;
+  --verde: #1F9D6B;
+  --menta: #9BE3B4;
+  --menta-fuerte: #7FD6A0;
+  --menta-palido: #D9F7E2;
+  --lavanda: #C3CCEE;
+  --cielo: #A9D4F0;
+  --fondo: #EAF3F6;
+  --borde: #D3DEF0;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+p { color: var(--texto-suave); }
+
+a { color: var(--verde); }
+
 #opc button{
   display: inline-flex;
   align-items: center;
@@ -22,7 +54,7 @@
   text-decoration: none;
   background: #fff;
   border: 2px solid transparent;
-  border-radius: 22px;
+  border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(89,100,152,.08),
               0 8px 22px rgba(89,100,152,.1);
@@ -56,7 +88,6 @@
   outline-offset: 3px;
 }
 
-
 #opc{
     justify-content: center;
     flex-wrap: wrap;
@@ -67,7 +98,6 @@
 body{
     justify-content: center;
     align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     background: #EAF3F6;
 }
@@ -127,7 +157,7 @@ body{
 .contenido {
   position: relative;
 }
-.hero {
+.intro {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -140,21 +170,21 @@ body{
   width: 320px;
   height: auto;
 }
+
 #pregunta{
     font-size: 45px;
     text-align: center;
-    color: black;
-    font-weight: bold;
+    color:  #2B3558;
     margin-top: 99px;
     margin-bottom: 40px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--azul);
 }
 
 #retro{
-    font-weight: bold;
-    color: aliceblue;
     align-items: center;
-    background-color: black;
-    border-radius: 6px;
+    border-radius: 12px;
     font-size: 25px;   
     padding: 12px;
     margin: 10px;
@@ -162,6 +192,13 @@ body{
     position: fixed;
     bottom: 20px;
     left: 20px;
+    justify-content: center;
+    font: inherit;
+    font-weight: 600;
+    color: #596498;
+    text-decoration: none;
+    background: #fff;
+    cursor: pointer;
 }
 
 #inicio {
@@ -175,15 +212,22 @@ body{
 }
 
 #comenzarBtn {
-  padding: 14px 32px;
-  border-radius: 12px;
-  background: var(--verde);
-  color: #fff;
-  border: none;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
+    padding: 14px 32px;
+    border-radius: 12px;
+    align-items: center;
+    font-size: 25px;   
+    margin: 20px;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    justify-content: center;
+    font: inherit;
+    font-weight: 600;
+    color: #596498;
+    text-decoration: none;
+    background: #fff;
+    cursor: pointer;
 }
 
 #contenidoArbol {

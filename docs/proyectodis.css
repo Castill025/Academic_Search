@@ -14,12 +14,35 @@ body {
 h1, h2, h3 {
   font-family: 'Fraunces', serif;
   font-weight: 700;
-  color: var(--azul);
+  color: #596498;
 }
 
-p{ color: var(--texto-suave); }
+.contenido {
+  font-family: 'Fraunces', serif;
+}
 
-a{ color: var(--verde); }
+#inicio {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#comenzarBtn {
+    padding: 14px 32px;
+    border-radius: 12px;
+    align-items: center;
+    font-size: 25px;   
+    margin: 20px;
+    border: none;
+    bottom: 20px;
+    left: 20px;
+    justify-content: center;
+    font: inherit;
+    font-weight: 600;
+    color: #596498;
+    text-decoration: none;
+    background: #fff;
+    cursor: pointer;
+}
 
 #opc button{
   align-items: center;
@@ -47,10 +70,102 @@ a{ color: var(--verde); }
   align-items: center;
 }
 
+#retro{
+    align-items: center;
+    border-radius: 12px;
+    font-size: 25px;   
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    bottom: 20px;
+    left: 20px;
+    justify-content: center;
+    font: inherit;
+    font-weight: 600;
+    color: #596498;
+    text-decoration: none;
+    background: #fff;
+    cursor: pointer;
+    position: absolute;
+}
+
 .marca_img {
   height: 64px;
   width: auto;
   display: block;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 80px 50px;
+}
+
+.intro_texto { flex: 1; }
+
+.masc_img {
+  width: 320px;
+  height: auto;
+}
+
+#pregunta{
+    font-size: 45px;
+    text-align: center;
+    color:  #2B3558;
+    margin-top: 99px;
+    margin-bottom: 40px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+#inicio {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+:root {
+  --azul: #596498;
+  --texto: #2B3558;
+  --texto-suave: #5F6B8C;
+  --texto-claro: #8a93b3;
+  --verde: #1F9D6B;
+  --menta: #9BE3B4;
+  --menta-fuerte: #7FD6A0;
+  --menta-palido: #D9F7E2;
+  --lavanda: #C3CCEE;
+  --cielo: #A9D4F0;
+  --fondo: #EAF3F6;
+  --borde: #D3DEF0;
+}
+p{ color: var(--texto-suave); }
+
+a{ color: var(--verde); }
+
+#subtitulo {
+  color: var(--texto-suave);
+  margin-bottom: 2rem;
+}
+
+#contenidoArbol {
+  display: flex;
+  align-items: center;
+}
+
+#footer {
+  text-align: center;
+  padding: 24px;
+  margin-top: 60px;
+  border-top: 1px solid var(--borde);
+  color: #C3CCEE;
+
+}
+
+#footer p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--texto-suave);
 }
 
 .fondo {
@@ -89,115 +204,4 @@ a{ color: var(--verde); }
   background: #A9D4F0;
   left: 40%;
   bottom: 80px;
-}
-
-.contenido {
-  font-family: 'Fraunces', serif;
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  padding: 20px 80px 50px;
-}
-
-.intro_texto { flex: 1; }
-
-.masc_img {
-  width: 320px;
-  height: auto;
-}
-
-#pregunta{
-    font-size: 45px;
-    text-align: center;
-    color:  #2B3558;
-    margin-top: 99px;
-    margin-bottom: 40px;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    color: var(--azul);
-}
-
-#retro{
-    align-items: center;
-    border-radius: 12px;
-    font-size: 25px;   
-    padding: 12px;
-    margin: 10px;
-    border: none;
-    bottom: 20px;
-    left: 20px;
-    justify-content: center;
-    font: inherit;
-    font-weight: 600;
-    color: #596498;
-    text-decoration: none;
-    background: #fff;
-    cursor: pointer;
-    position: absolute;
-}
-
-#inicio {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-:root {
-  --azul: #596498;
-  --texto: #2B3558;
-  --texto-suave: #5F6B8C;
-  --texto-claro: #8a93b3;
-  --verde: #1F9D6B;
-  --menta: #9BE3B4;
-  --menta-fuerte: #7FD6A0;
-  --menta-palido: #D9F7E2;
-  --lavanda: #C3CCEE;
-  --cielo: #A9D4F0;
-  --fondo: #EAF3F6;
-  --borde: #D3DEF0;
-}
-
-#subtitulo {
-  color: var(--texto-suave);
-  margin-bottom: 2rem;
-}
-
-#comenzarBtn {
-    padding: 14px 32px;
-    border-radius: 12px;
-    align-items: center;
-    font-size: 25px;   
-    margin: 20px;
-    border: none;
-    bottom: 20px;
-    left: 20px;
-    justify-content: center;
-    font: inherit;
-    font-weight: 600;
-    color: #596498;
-    text-decoration: none;
-    background: #fff;
-    cursor: pointer;
-}
-
-#contenidoArbol {
-  display: flex;
-  align-items: center;
-}
-
-#footer {
-  text-align: center;
-  padding: 24px;
-  margin-top: 60px;
-  border-top: 1px solid var(--borde);
-  color: #C3CCEE;
-
-}
-
-#footer p {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: var(--texto-suave);
 }

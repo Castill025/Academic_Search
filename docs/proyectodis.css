@@ -3,14 +3,6 @@
     margin: 0;
 }
 
-.titulo{
-    text-align: center;
-    font-size: 50px;
-    background-color: black;
-    color: aliceblue;
-    padding: 25px;
-}
-
 :root {
   --azul: #596498;
   --texto: #2B3558;
@@ -59,35 +51,12 @@ a{ color: var(--verde); }
   box-shadow: 0 1px 2px rgba(89,100,152,.08),
               0 8px 22px rgba(89,100,152,.1);
   transition: transform .2s, box-shadow .2s, border-color .2s;
+  font-size: 25px;   
+  margin: 20px;
+  border: none;
+  bottom: 10px;
+  left: 20px;
 }
-
-.button:hover {
-  transform: translateY(-4px);
-  border-color: #9BE3B4;
-  box-shadow: 0 14px 30px rgba(89,100,152,.2);
-}
-
-.button:active {
-  transform: translateY(-1px);
-}
-
-.button.seleccionado {
-  border-color: #7FD6A0;
-  background: #F6FFF9;
-}
-
-.button:disabled {
-  opacity: .5;
-  box-shadow: none;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.button:focus-visible {
-  outline: 3px solid #7FD6A0;
-  outline-offset: 3px;
-}
-
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -97,10 +66,10 @@ a{ color: var(--verde); }
 
 #opc{
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.btn_menu{
+#historialBtn, #contactoBtn{
   align-items: center;
   justify-content: center;
   display: flex;
@@ -133,7 +102,7 @@ body{
   padding: 16px 60px;
 }
 
-.marca img {
+.marca_img {
   height: 64px;
   width: auto;
   display: block;

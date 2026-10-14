@@ -10,8 +10,8 @@ app.get("/api/Contenido",(req,res)=>{
   const{nivel,area,materia,tema,subtema}=req.query;
 
   const resultados=mibd.prepare(
-    "SELECT *FROM Contenido WHERE nivel=? AND area=? AND materia=? AND tema=? AND subtema=?"
-  ).all(nivel,area,materia,tema,subtema);
+    "SELECT *FROM Contenido WHERE nivel=? AND area=? AND materia=? AND tema=? AND subtema=? AND tipo_doc=? AND link=?"
+  ).all(nivel,area,materia,tema,subtema,tipo_doc,link);
 
   res.json(resultados);
 });

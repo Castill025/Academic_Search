@@ -37,10 +37,16 @@ function mNodo(){
   });
 
   const contBtn=document.getElementById("retro");
-  contBtn.style.display=hist.length>1? "inline-block":"none";
+  contBtn.style.display=hist.length>=1? "inline-block":"none";
 }
 
 document.getElementById("retro").onclick=()=>{
+  if (hist.length===1){
+    document.getElementById("contenidoArbol").style.display = "none";
+    document.getElementById("inicio").style.display = "block";
+    hist = [arbolPrincipal];
+    return;
+  }
   hist.pop();
   mNodo();
 };

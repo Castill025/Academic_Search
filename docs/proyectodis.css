@@ -89,10 +89,9 @@ a { color: var(--verde); }
 }
 
 #opc{
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 body{
@@ -232,4 +231,17 @@ body{
 
 #contenidoArbol {
   display: none;
+}
+
+#footer {
+  text-align: center;
+  padding: 24px;
+  margin-top: 60px;
+  border-top: 1px solid var(--borde);
+}
+
+#footer p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--texto-suave);
 }

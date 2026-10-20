@@ -5,11 +5,10 @@ const app=lexpr();
 app.use(cors());
 const mibd=new lsql("DB_Buscador.db");
 
-
 app.get("/api/Contenido",(req,res)=>{
   const{nivel,area,materia,tema,subtema}=req.query;
 
- const campos = { nivel, area, materia, tema, subtema };
+  const campos = { nivel, area, materia, tema, subtema };
   const condiciones = [];
   const valores = [];
 
@@ -25,3 +24,9 @@ app.get("/api/Contenido",(req,res)=>{
 
   res.json(resultados);
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Servidor corriendo en el puerto " + PORT);
+});
+ 

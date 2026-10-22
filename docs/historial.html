@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyectodis.css">
+    <title>Historial — Academic Search</title>
+</head>
+<body>
+    <nav id="navbar">
+      <div id="navLogo">Academic Search</div>
+      <div id="navLinks">
+        <a href="historial.html" id="historialBtn">Historial</a>
+        <a href="contacto.html" id="contactoBtn">Contacto</a>
+      </div>
+    </nav>
+
+    <h1>Tu historial de búsqueda</h1>
+    <div id="listaHistorial"></div>
+    <a href="index.html">← Volver al buscador</a>
+
+    <footer id="footer">
+      <p>© 2026 Academic Search — Explora el conocimiento, rama por rama.</p>
+    </footer>
+
+    <script>
+      const camino = JSON.parse(localStorage.getItem("camino") || "[]");
+      const contenedor = document.getElementById("listaHistorial");
+      contenedor.innerHTML = camino.length
+        ? "<p>" + camino.join(" → ") + "</p>"
+        : "<p>Todavía no has navegado ningún camino.</p>";
+    </script>
+</body>
+</html>

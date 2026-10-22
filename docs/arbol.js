@@ -30,7 +30,14 @@ function mNodo(){
     btn.textContent=opcion.titulo;
     btn.onclick=()=>{
       elec[niveles[hist.length - 1]]=opcion.titulo;
+      let camino = JSON.parse(localStorage.getItem("camino") || "[]");
+      camino.push(opcion.titulo);
+      localStorage.setItem("camino", JSON.stringify(camino));
+      
       hist.push(opcion.hijo);
+      if (esRaiz) {
+        document.getElementById("menuPanel").classList.remove("abierto");
+      }
       mNodo();
     };
     document.getElementById("opc").appendChild(btn);

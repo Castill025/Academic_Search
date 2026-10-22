@@ -8,6 +8,46 @@ body {
   align-items: center;
   margin: 0;
   background: #EAF3F6;
+  min-height: 100vh;
+}
+
+.fondo{ 
+  position:fixed; 
+  inset:0; 
+  z-index:-1; 
+  overflow:hidden; 
+  pointer-events:none; 
+}
+
+.Circ-V, .Circ-L, .Circ-A{ 
+  position:absolute; 
+  border-radius:50%; 
+  filter:blur(60px); 
+  opacity:.55; 
+}
+
+.Circ-V{ 
+  width:420px; 
+  height:420px; 
+  background:#9BE3B4; 
+  left:-100px; 
+  top:60px 
+}
+
+.Circ-L{ 
+  width:380px; 
+  height:380px; 
+  background:#C3CCEE; 
+  right:-60px; 
+  top:20px 
+}
+
+.Circ-A{ 
+  width:340px; 
+  height:340px; 
+  background:#A9D4F0; 
+  left:40%; 
+  bottom:80px 
 }
 
 .marca_img {
@@ -18,4 +58,19 @@ body {
 .masc_img {
   width: 50px;
   height: auto;
+}
+
+#navLinks a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto-suave);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+#navLinks a:hover {
+  background: var(--menta-palido);
+  color: var(--verde);
 }

@@ -17,6 +17,8 @@ function nActual(){
 function mNodo(){
   const nodo=nActual();
 
+  const esRaiz = hist.length === 1;
+
   if (nodo.fin){
     mResultados();
     return;
@@ -28,12 +30,13 @@ function mNodo(){
   nodo.opc.forEach(opcion=>{
     const btn=document.createElement("button");
     btn.textContent=opcion.titulo;
+    
     btn.onclick=()=>{
       elec[niveles[hist.length - 1]]=opcion.titulo;
       let camino = JSON.parse(localStorage.getItem("camino") || "[]");
       camino.push(opcion.titulo);
       localStorage.setItem("camino", JSON.stringify(camino));
-      
+       
       hist.push(opcion.hijo);
       if (esRaiz) {
         document.getElementById("menuPanel").classList.remove("abierto");

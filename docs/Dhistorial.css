@@ -1,0 +1,93 @@
+body{ 
+    margin:0; 
+    min-height:100vh; 
+    background:#EAF3F6; 
+}
+
+.pagina{ 
+    display:flex; 
+    gap:40px; 
+    max-width:1200px; 
+    margin:0 auto; 
+    padding:50px 40px 
+}
+
+.principal{ 
+    flex:1.4; 
+    min-width:0 
+}
+
+.lateral{ 
+    flex:1; 
+    display:flex; 
+    flex-direction:column;
+    gap:22px; 
+    padding-top:70px 
+}
+
+.stats{ 
+    display:flex; 
+    gap:12px 
+}
+
+.stats div{ 
+    background:#fff; 
+    border-radius:18px; 
+    padding:12px 18px; 
+    box-shadow:0 6px 18px rgba(89,100,152,.1) 
+}
+
+.stats b{ 
+    display:block; 
+    font-family:'Fraunces'…; 
+    font-size:24px 
+}
+
+.filtros button.on{ 
+    background:#D9F7E2; 
+    border-color:#7FD6A0; 
+    color:#1F6B4B; 
+    font-weight:600 
+}
+
+.linea{ 
+    position:relative; 
+    padding-left:56px 
+}
+
+.linea::before{ 
+    content:""; position:absolute; 
+    left:21px; 
+    top:30px; 
+    bottom:30px; 
+    width:4px; 
+    background:linear-gradient(#7FD6A0,#C3CCEE) 
+}
+
+.nodo{ 
+    position:absolute; 
+    left:-56px; 
+    top:10px; 
+    width:46px; 
+    height:46px; 
+    border-radius:50%; 
+    background:#fff; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center 
+}
+
+.nodo::after{ 
+    content:""; 
+    width:22px; 
+    height:22px; 
+    background:var(--hoja); 
+    border-radius:2px 70% 2px 70%; 
+    transform:rotate(-8deg) 
+}
+
+.tarjeta.actual{ 
+    border:2px solid #7FD6A0; 
+    background:#F6FFF9 
+}
+

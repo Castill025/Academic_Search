@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyectodis.css">
+    <title>Contacto — Academic Search</title>
+</head>
+<body>
+    <nav id="navbar">
+      <div id="navLogo">Academic Search</div>
+      <div id="navLinks">
+        <a href="historial.html" id="historialBtn">Historial</a>
+        <a href="contacto.html" id="contactoBtn">Contacto</a>
+      </div>
+    </nav>
+
+    <h1>Contáctanos</h1>
+    <input type="text" id="contactoNombre" placeholder="Tu nombre">
+    <textarea id="contactoMensaje" placeholder="Tu mensaje"></textarea>
+    <button id="enviarContactoBtn">Enviar</button>
+
+    <a href="index.html">← Volver al buscador</a>
+
+    <footer id="footer">
+      <p>© 2026 Academic Search — Explora el conocimiento, rama por rama.</p>
+    </footer>
+
+    <script>
+      document.getElementById("enviarContactoBtn").onclick = () => {
+        const nombre = document.getElementById("contactoNombre").value;
+        const mensaje = document.getElementById("contactoMensaje").value;
+        const asunto = encodeURIComponent("Contacto desde Academic Search");
+        const cuerpo = encodeURIComponent(`Nombre: ${nombre}\n\n${mensaje}`);
+        window.location.href = `mailto:tu-correo@ejemplo.com?subject=${asunto}&body=${cuerpo}`;
+      };
+    </script>
+</body>
+</html>

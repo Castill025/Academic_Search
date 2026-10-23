@@ -38,9 +38,6 @@ function mNodo(){
       localStorage.setItem("camino", JSON.stringify(camino));
        
       hist.push(opcion.hijo);
-      if (esRaiz) {
-        document.getElementById("menuPanel").classList.remove("abierto");
-      }
       mNodo();
     };
     document.getElementById("opc").appendChild(btn);

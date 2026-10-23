@@ -74,3 +74,12 @@ body {
   background: var(--menta-palido);
   color: var(--verde);
 }
+
+#arbolVisual {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}

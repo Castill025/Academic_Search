@@ -75,6 +75,7 @@ function dibujarArbolVisual(pasos){
 function mNodo(){
   const nodo=nActual();
 
+  const pasos = ["Inicio", ...JSON.parse(localStorage.getItem("camino") || "[]")]; dibujarArbolVisual(pasos);
   const esRaiz = hist.length === 1;
 
   if (nodo.fin){

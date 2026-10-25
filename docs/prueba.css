@@ -83,3 +83,27 @@ body {
   margin-bottom: 24px;
   overflow-x: auto;
 }
+
+.resultado {
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.resultado-meta {
+  font-size: 12px;
+  color: var(--texto-suave);
+  margin: 6px 0;
+}
+
+.citar-btn {
+  font-size: 12px;
+  color: var(--verde);
+  background: var(--menta-palido);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}

@@ -50,6 +50,128 @@ body {
   bottom:80px 
 }
 
+.contenido{
+  width:100%; 
+  display:flex; 
+  flex-direction:column;
+}
+
+.hero{ 
+  max-width:1100px; 
+  width:100%; 
+  margin:0 auto; 
+  padding:40px 28px 0;
+  display:flex; 
+  align-items:center; 
+  gap:30px; 
+  position:relative; 
+  z-index:2; 
+}
+
+.hero-txt{ 
+  flex:1.2 
+}  
+
+.hero-mas{ 
+  flex:1; 
+  position:relative; 
+  display:flex; 
+  justify-content:center 
+}
+
+.hero-mas img{ 
+  width:min(300px,100%); 
+  filter:drop-shadow(0 12px 16px rgba(47,110,80,.28));
+  animation:flota 5s ease-in-out infinite; 
+}
+
+@keyframes flota{ 
+  50%{ transform:translateY(-8px) } 
+}
+
+.nube{ 
+  position:absolute; 
+  left:8%; 
+  top:2%; 
+  width:110px; 
+  height:24px; 
+  background:#fff; 
+  border-radius:999px;
+  box-shadow:20px -8px 0 -4px #fff, -16px -5px 0 -5px #fff; 
+}
+
+.paisaje{ 
+  position:relative; 
+  height:150px; 
+  margin-top:-60px; 
+  z-index:1 
+}
+
+.paisaje svg{ 
+  position:absolute; 
+  left:0; 
+  bottom:-60px; 
+  width:100%; 
+  height:230px 
+}
+
+.arb{ 
+  position:absolute; 
+  width:26px; 
+  height:26px; 
+  border-radius:50%; 
+  background:#7FD6A0;
+  box-shadow:-9px 8px 0 -3px #7FD6A0, 9px 8px 0 -3px #7FD6A0; 
+}
+
+.arb::after{ 
+  content:""; 
+  position:absolute; 
+  left:11px; 
+  top:22px; 
+  width:5px; 
+  height:16px; 
+  background:#6E8BC0 
+}  
+
+.a1{ 
+  left:9%; 
+  top:48px 
+}
+
+.como{ 
+  position:relative; 
+  z-index:2; 
+  background:#7FD6A0; 
+  padding:30px 28px 76px; 
+  text-align:center 
+}
+
+.pasos{ 
+  list-style:none; 
+  display:flex; 
+  justify-content:center; 
+  align-items:flex-start; 
+  gap:8px 
+}
+
+.pasos li:not(.puntos){ 
+  width:260px 
+}
+
+.pasos span{
+   width:48px; 
+   height:48px; 
+   border-radius:50%; 
+   background:#fff;
+}   
+
+.puntos{ 
+  width: 70px; 
+  border-top: 3px dotted #fff; 
+  margin-top:24px 
+}            
+
 .marca_img {
   width: 50px;
   height: auto;

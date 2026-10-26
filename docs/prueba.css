@@ -100,19 +100,15 @@ body {
   box-shadow:20px -8px 0 -4px #fff, -16px -5px 0 -5px #fff; 
 }
 
-.paisaje{ 
-  position:relative; 
-  height:150px; 
-  margin-top:-60px; 
-  z-index:1 
+.paisaje {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -2px;
 }
 
-.paisaje svg{ 
-  position:absolute; 
-  left:0; 
-  bottom:-60px; 
-  width:100%; 
-  height:230px 
+.paisaje svg {
+  display: block;
 }
 
 .arb{ 

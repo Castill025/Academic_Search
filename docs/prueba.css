@@ -178,6 +178,10 @@ body {
   height: auto;
 }
 
+#contenidoArbol {
+  display: none;
+}
+
 #navLinks a {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;

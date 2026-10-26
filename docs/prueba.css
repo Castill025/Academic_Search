@@ -229,3 +229,57 @@ body {
   padding: 4px 10px;
   cursor: pointer;
 }
+
+.footer{
+  position:relative; overflow:hidden;
+  background:linear-gradient(135deg,#7482BC,#5F6DAA);
+  color:#F1F4FF;
+}
+
+.f-inicio,.f-fin{ 
+  position:relative; z-index:2 
+}
+
+.f-marca p,.f-fin{ color:#EEF1FF }
+
+.f-cols{ gap:10px; align-items:flex-start }
+
+.f-cols h4{ display:none }
+
+.f-cols div{ display:flex; flex-wrap:wrap; gap:10px }
+
+.f-cols a{ background:rgba(255,255,255,.2); 
+  color:#fff; border-radius:999px; padding:8px 18px;
+  font-weight:600; 
+  transition:background .15s, transform .15s 
+}
+
+.f-cols a:hover{ 
+  background:var(--menta); 
+  color:#12402B; 
+  text-decoration:none; 
+  transform:translateY(-2px) 
+}
+
+.footer::before,.footer::after{ 
+  content:""; 
+  position:absolute; 
+  border-radius:4px 70% 4px 70%;
+  background:var(--menta); opacity:.28; z-index:1 
+}
+
+.footer::before{ 
+  width:90px; 
+  eight:90px; 
+  right:60px; 
+  top:-26px; 
+  transform:rotate(20deg) 
+}
+
+.footer::after{ 
+  width:64px; 
+  height:64px; 
+  left:46%; 
+  bottom:-22px; 
+  transform:rotate(60deg) 
+}

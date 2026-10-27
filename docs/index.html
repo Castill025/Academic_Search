@@ -7,21 +7,22 @@
     <title>Buscador Academico con arbol de decisiones</title>
 </head>
 <body>
-    <header class="barra">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <header class="header">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
 
-        <nav id="navbar">
-          <div id="navlogo">Academic Search</div>
+
+        <a href="index.html" class="marca"> Academic <span>Search</span>
+          <img src="logo-completo.png" alt="Academic Search">
+        </a>
+
+        <nav class="menu" aria-label="Principal">
           <div id="navlinks">
             <a href="historial.html" id="historialBtn">Historial</a>
             <a href="contacto.html" id="contactoBtn">Contacto</a>
           </div>
 
-          <a href="index.html" class="marca">
-            <img src="logo-completo.png" alt="Academic Search">
-          </a>
         </nav> 
     </header>
 
@@ -36,7 +37,7 @@
         <div class="hero-txt">
           <h1>¿Qué quieres <em>aprender</em> hoy?</h1>
            <p class="sub">Elige un área y te llevo, paso a paso, hasta el tema que buscas.</p>
-           <button id="comenzarBtn">Comenzar</button>
+           <a class="comenzarBtn" href="#">Comenzar</a>
         </div>
 
         <div class="hero-mas">

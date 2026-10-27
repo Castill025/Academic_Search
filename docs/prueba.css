@@ -57,15 +57,12 @@ body {
 }
 
 .hero{ 
-  max-width:1100px; 
-  width:100%; 
+  max-width:1100px;  
   margin:0 auto; 
   padding:40px 28px 0;
   display:flex; 
   align-items:center; 
   gap:30px; 
-  position:relative; 
-  z-index:2; 
 }
 
 .hero-txt{ 
@@ -83,6 +80,19 @@ body {
   width:min(300px,100%); 
   filter:drop-shadow(0 12px 16px rgba(47,110,80,.28));
   animation:flota 5s ease-in-out infinite; 
+}
+
+.comenzarBtn{
+  display:inline-block; margin-top:26px;
+  background:var(--kashmir); color:#fff; text-decoration:none;
+  font-weight:700; font-size:16px; padding:14px 34px; border-radius:999px;
+  box-shadow:0 10px 24px rgba(89,100,152,.35);
+  transition:transform .15s, background .15s;
+}
+
+.comenzar:hover{ 
+  background:#4a5586; 
+  transform:translateY(-2px) 
 }
 
 @keyframes flota{ 
@@ -168,9 +178,10 @@ body {
   margin-top:24px 
 }            
 
-.marca_img {
-  width: 50px;
-  height: auto;
+.marca img{ 
+  height: 44px; 
+  width:auto; 
+  display:block 
 }
 
 .masc_img {

@@ -78,19 +78,23 @@ body {
 .menu a:hover{ color:var(--kashmir) }
 .menu a[aria-current="page"]{ color:var(--kashmir); border-bottom-color:var(--menta) }
 
-.contenido{
+.contenido{   
   width:100%; 
   display:flex; 
   flex-direction:column;
 }
 
+
 .hero{ 
   max-width:1100px;  
+  width: 100%;
   margin:0 auto; 
   padding:40px 28px 0;
   display:flex; 
   align-items:center; 
   gap:30px; 
+  position: relative;
+  z-index: 2;
 }
 
 .hero-txt{ 

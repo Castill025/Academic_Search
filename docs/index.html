@@ -13,12 +13,13 @@
        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
 
 
-        <a href="index.html" class="marca"> Academic <span>Search</span>
+        <a href="index.html" class="marca">
           <img src="logo-completo.png" alt="Academic Search">
         </a>
 
         <nav class="menu" aria-label="Principal">
           <div id="navlinks">
+            <a href="index.html" aria-current="page">Inicio</a>
             <a href="historial.html" id="historialBtn">Historial</a>
             <a href="contacto.html" id="contactoBtn">Contacto</a>
           </div>
@@ -37,7 +38,7 @@
         <div class="hero-txt">
           <h1>¿Qué quieres <em>aprender</em> hoy?</h1>
            <p class="sub">Elige un área y te llevo, paso a paso, hasta el tema que buscas.</p>
-           <a class="comenzarBtn" href="#">Comenzar</a>
+           <a button="comenzarBtn">Comenzar</a>
         </div>
 
         <div class="hero-mas">
@@ -61,24 +62,35 @@
         </svg>
       </div>
 
+      <section class="como">
+        <h2>Así funciona</h2>
+        <ol class="pasos">
+          <li><span>1</span><b>Elige un área</b><small>Ciencias, Matemáticas, Humanidades…</small></li>
+          <li class="puntos" aria-hidden="true"></li>
+          <li><span>2</span><b>Sigue las ramas</b><small>Cada paso afina tu búsqueda</small></li>
+          <li class="puntos" aria-hidden="true"></li>
+         <li><span>3</span><b>Llega a tu hoja</b><small>Lee la respuesta y sigue explorando</small></li>
+        </ol>
+      </section>
+
       <footer id="footer">
         <div class="f-inicio">
-          <div class="f-marca">…logo y frase…</div>
-          <nav class="f-cols">
+          <div class="f-marca">
+            <a href="index.html" class="marca">Academic <span>Sarch</span> </a>
+            <p>Explora el conocimiento rama por rama, hasta llegar a tu destino, tu hoja.</p>
+          </div>
 
-           <div>
-           <h4>Explorar</h4>
-           <a href="index.html">Inicio</a>
-           <p>© 2026 Academic Search — Buscador Académico</p>
-           </div>
+          <nav class="f-cols" aria-label="Pie de página">
            <div>
              <h4>Ayuda</h4>
              <a href="contacto.html">Contacto</a>
             </div>
           </nav>
         </div>
+
         <div class="f-fin">
-          <p>© 2026 Academic Search — Buscador Académico</p>
+          <span><i class="hoja"></i>Aprendendiendo, rama por rama.</span>
+          <span>© 2026 Academic Search — Buscador Académico</span>
         </div>
       </footer>
     

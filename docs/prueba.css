@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html{ 
+  background:#EAF3F6 
+}
+html, body{ 
+  border:0; outline:0; margin:0 
+}
 body{
   margin:0;
   background:#EAF3F6;
@@ -161,13 +167,13 @@ body{
 
 
 .hero{ 
-  max-width:1100px;  
+  max-width:1400px;  
   width: 100%;
   margin:0 auto; 
-  padding:40px 28px 0;
+  padding:56px clamp(20px,4vw,64px) 0;
   display:flex; 
   align-items:center; 
-  gap:30px; 
+  gap:60px; 
   position: relative;
   z-index: 2;
 }
@@ -175,20 +181,19 @@ body{
 .hero-txt{ 
   flex:1.2 
 }  
-.hero h1{ font-family:'Fraunces',Georgia,serif; font-size:clamp(34px,5.4vw,58px); line-height:1.1; color:var(--kashmir); margin:0 }
+.hero h1{ font-family:'Fraunces',Georgia,serif; font-size:clamp(38px,5.6vw,68px); line-height:1.1; color:var(--kashmir); margin:0 }
 .hero h1 em{ font-style:normal; color:var(--verde) }
-.hero .sub{ font-size:clamp(16px,2vw,19px); color:var(--suave); line-height:1.5; margin:16px 0 0; max-width:540px }
+.hero .sub{ font-size:clamp(17px,2vw,21px); color:var(--suave); line-height:1.5; margin:16px 0 0; max-width:560px }
 .comenzar{ display:inline-block; margin-top:28px; background:var(--kashmir); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:14px 34px; border-radius:999px; box-shadow:0 10px 24px rgba(89,100,152,.35); transition:transform .15s, background .15s }
 .comenzar:hover{ background:#4a5586; transform:translateY(-2px) }
 .hero-mas{ flex:1; position:relative; display:flex; justify-content:center }
-.hero-mas img{ width:min(300px,100%); height:auto; position:relative; filter:drop-shadow(0 12px 16px rgba(47,110,80,.28)); animation:flota 5s ease-in-out infinite }
-.nube{ position:absolute; left:8%; top:2%; width:110px; height:24px; background:#fff; border-radius:999px; opacity:.9; box-shadow:20px -8px 0 -4px #fff, -16px -5px 0 -5px #fff }
+.hero-mas img{ width:min(360px,100%); height:auto; position:relative; filter:drop-shadow(0 12px 16px rgba(47,110,80,.28)); animation:flota 5s ease-in-out infinite }
 
 .comenzar:hover{ 
   background:#4a5586; 
   transform:translateY(-2px) 
 }
-
+ 
 @keyframes flota{ 
   50%{ transform:translateY(-8px) } 
 }
@@ -256,19 +261,19 @@ body{
 .como h2{ font-family:'Fraunces',Georgia,serif; font-size:clamp(24px,3vw,30px); color:#12402B; margin:0 0 22px }
 
 .pasos{
-  list-style:none; margin:0 auto; padding:0; max-width:1000px;
-  display:flex; justify-content:center; align-items:flex-start; gap:8px;
+  list-style:none; margin:0 auto; padding:0; max-width:1200px;
+  display:flex; justify-content:center; align-items:flex-start; gap:16px;
 }
-.pasos li:not(.puntos){ width:260px }
+.pasos li:not(.puntos){ width:300px }
 .pasos span{
   display:flex; align-items:center; justify-content:center; margin:0 auto 10px;
   width:48px; height:48px; border-radius:50%; background:#fff; color:var(--verde);
   font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:24px;
   box-shadow:0 6px 14px rgba(18,64,43,.2);
 }
-.pasos b{ display:block; font-family:'Fraunces',Georgia,serif; font-size:19px; color:#12402B }
-.pasos small{ display:block; font-size:13px; color:#1F6B4B }
-.puntos{ width:70px; border-top:3px dotted #fff; margin-top:24px }
+.pasos b{ display:block; font-family:'Fraunces',Georgia,serif; font-size:22px; color:#12402B }
+.pasos small{ display:block; font-size:15px; margin-top: 4px; color:#1F6B4B; }
+.puntos{ width:90px; border-top:3px dotted #fff; margin-top:26px }
 
 .marca img{ 
   height: 44px; 
@@ -314,7 +319,7 @@ body{
   cursor: pointer;
 }
 
-.areas{ position:relative; z-index:2; width:100%; max-width:1700px; margin:0 auto; padding:40px clamp(16px,4vw,64px) 90px }
+.areas{ position:relative; z-index:2; width:100%; max-width:1400px; margin:0 auto; padding:40px clamp(16px,4vw,64px) 90px }
 .areas h2{ font-family:'Fraunces',Georgia,serif; font-size:clamp(26px,3.4vw,32px); color:var(--kashmir); text-align:center }
 .areas .lead{ text-align:center; color:var(--suave); font-size:16px; margin:6px 0 28px }
 .areas-grupo{ margin-bottom:26px }
@@ -357,15 +362,26 @@ body{
   background:linear-gradient(135deg,#7482BC,#5F6DAA); color:#F1F4FF;
   border-radius:32px 32px 0 0; padding:36px 40px 18px;
 }
-.f-inicio{ position:relative; z-index:2; max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap }
-#footer .marca{ color:#fff }
+.f-inicio{ position:relative; z-index:2; max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap }
+#footer .marca{ font-family:'Fraunces',Georgia,serif;
+  font-size:26px;
+  font-weight:700;
+  color:#fff; }
 #footer .marca span{ color:var(--menta) }
-.f-marca p{ margin:8px 0 0; font-size:14px; color:#EEF1FF; max-width:280px; line-height:1.5 }
-.f-cols h4{ display:none }
-.f-cols div{ display:flex; flex-wrap:wrap; gap:10px }
-.f-cols a{ background:rgba(255,255,255,.2); color:#fff; text-decoration:none; border-radius:999px; padding:8px 18px; font-weight:600; font-size:14px; transition:background .15s, transform .15s }
-.f-cols a:hover{ background:var(--menta); color:#12402B; transform:translateY(-2px) }
-.f-fin{ position:relative; z-index:2; max-width:1120px; margin:26px auto 0; padding-top:14px; border-top:1px solid rgba(255,255,255,.18); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:12px; color:#EEF1FF }
+.f-marca p{ margin:8px 0 0; font-size:15px; color:#EEF1FF; max-width:330px; line-height:1.6 }
+.f-cols{ display:flex; gap:70px }
+.f-cols h4{ 
+    display:block;
+  margin:0 0 12px;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#9BE3B4;
+}
+.f-cols div{ display:block; flex-wrap:wrap; gap:10px }
+.f-cols a{ background:none; color:#fff; text-decoration:none; border-radius:0; padding:0; font-weight:500; font-size:15px; transition:background .15s, transform .15s; display: block; margin-bottom: 9px; font-weight: 500;}
+.f-cols a:hover{ background:none; color:#9BE3B4; transform:none }
+.f-fin{ position:relative; z-index:2; max-width:1400px; margin:26px auto 0; padding-top:14px; border-top:1px solid rgba(255,255,255,.18); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:13px; color:#EEF1FF }
 .hojita{ display:inline-block; width:12px; height:12px; background:var(--menta); border-radius:2px 70% 2px 70%; transform:rotate(-8deg); margin-right:6px; vertical-align:-1px }
 #footer::before,#footer::after{ content:""; position:absolute; border-radius:4px 70% 4px 70%; background:var(--menta); opacity:.28; z-index:1 }
 #footer::before{ width:90px; height:90px; right:60px; top:-26px; transform:rotate(20deg) }

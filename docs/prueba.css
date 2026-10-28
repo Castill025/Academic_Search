@@ -66,10 +66,13 @@ body{
   display:flex; 
   justify-content:space-between; 
   align-items:center;
-  max-width:1200px; 
+  max-width:none; 
   width:100%; 
-  margin:0 auto; 
-  padding:22px 40px 0;
+  margin:0; 
+  padding:0 clamp(16px,4vw,60px);
+  min-height:68px;
+  background:linear-gradient(135deg,#7482BC,#5F6DAA);
+  box-shadow:0 6px 18px rgba(95,109,170,.25);
 }
 
 .marca span{ color:var(--verde) }
@@ -114,8 +117,12 @@ body{
 
 #navlinks{ display:flex; align-items:center; gap:26px }
 #navlinks a{ white-space:nowrap; color:var(--suave); text-decoration:none; font-weight:600; font-size:15px; padding:4px 0; border-bottom:3px solid transparent }
-#navlinks a:hover{ color:var(--kashmir) }
-#navlinks a[aria-current="page"]{ color:var(--kashmir); border-bottom-color:var(--menta) }
+#navlinks a:hover{ background:rgba(255,255,255,.16); color:#fff }
+body #navlinks a[aria-current="page"]{
+  background:#9BE3B4;
+  color:#12402B;
+  font-weight:700;
+}
 
 .menu{ display:flex; align-items:center; gap:26px }
 .menu a{ white-space:nowrap; color:var(--suave); text-decoration:none; font-weight:600; font-size:15px; padding:4px 0; border-bottom:3px solid transparent }

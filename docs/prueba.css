@@ -247,6 +247,44 @@ body{
   cursor: pointer;
 }
 
+.areas{ position:relative; z-index:2; width:100%; max-width:1700px; margin:0 auto; padding:40px clamp(16px,4vw,64px) 90px }
+.areas h2{ font-family:'Fraunces',Georgia,serif; font-size:clamp(26px,3.4vw,32px); color:var(--kashmir); text-align:center }
+.areas .lead{ text-align:center; color:var(--suave); font-size:16px; margin:6px 0 28px }
+.areas-grupo{ margin-bottom:26px }
+.areas-nivel{ display:flex; align-items:center; gap:8px; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--kashmir); margin:0 0 12px }
+.areas-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px }
+
+.area{
+  position:relative; overflow:hidden; min-height:150px;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  border-radius:24px; padding:18px 18px 20px;
+  transition:transform .2s, box-shadow .2s;
+}
+.area:hover{ transform:translateY(-4px); box-shadow:0 14px 28px rgba(89,100,152,.2) }
+.area::after{                                  /* hoja decorativa en la esquina */
+  content:""; position:absolute; right:-18px; top:-18px; width:76px; height:76px;
+  border-radius:4px 70% 4px 70%; background:rgba(255,255,255,.4); transform:rotate(20deg);
+}
+.area-ico{
+  position:absolute; left:18px; top:16px; width:42px; height:42px; border-radius:50%;
+  background:rgba(255,255,255,.7); display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:16px;
+}
+.area b{ font-family:'Fraunces',Georgia,serif; font-size:19px; line-height:1.15 }
+.area small{ font-size:13px; opacity:.85; margin-top:4px }
+
+.verde{ background:#9BE3B4; color:#12402B }
+.azul{  background:#A9D4F0; color:#1F4F73 }
+.lila{  background:#C3CCEE; color:#3E487A }
+.menta{ background:#D9F7E2; color:#1F6B4B }
+.crema{ background:#F6E7C8; color:#6B4E1F }
+
+@media (max-width:860px){
+  .areas{ padding:32px 16px 70px }
+  .areas-grid{ grid-template-columns:1fr }
+  .area{ min-height:120px }
+}
+
 #footer{
   position:relative; z-index:3; overflow:hidden; margin-top:-32px;
   background:linear-gradient(135deg,#7482BC,#5F6DAA); color:#F1F4FF;

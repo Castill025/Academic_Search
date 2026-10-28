@@ -72,9 +72,45 @@ body{
   padding:22px 40px 0;
 }
 
-.marca{ white-space:nowrap; font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:24px; color:var(--kashmir); text-decoration:none }
 .marca span{ color:var(--verde) }
-.marca img{ height:44px; width:auto; display:block }
+
+.header .marca{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  padding:0;
+  background:none;
+}
+
+/* círculo menta detrás de la mascota */
+.marca-medallon{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at 50% 40%,#E9FFF1,#9BE3B4);
+  box-shadow:0 4px 10px rgba(18,28,70,.25);
+  flex-shrink:0;
+}
+.marca-medallon img{
+  height:42px;
+  width:auto;
+}
+
+/* nombre en texto */
+.marca-nombre{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:24px;
+  line-height:1;
+  color:#fff;
+  white-space:nowrap;
+}
+.marca-nombre span{
+  color:#9BE3B4;
+}
 
 #navlinks{ display:flex; align-items:center; gap:26px }
 #navlinks a{ white-space:nowrap; color:var(--suave); text-decoration:none; font-weight:600; font-size:15px; padding:4px 0; border-bottom:3px solid transparent }

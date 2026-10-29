@@ -206,6 +206,7 @@ body{
   position:relative;
   z-index:2;
   width: 100%;
+  align-self: stretch;
 }
 
 
@@ -403,7 +404,7 @@ body .areas{ padding-bottom:20px }
 .arbol-layout{
   max-width:1200px; margin:0 auto; width:100%;
   padding:32px clamp(16px,3vw,48px) 60px;
-  display:grid; grid-template-columns:330px 1fr; gap:28px; align-items:start;
+  display:grid; grid-template-columns:330px minmax(0,1fr); gap:28px; align-items:start;
   position:relative; z-index:2;
 }
 .arbol-lado{ display:grid; gap:20px }

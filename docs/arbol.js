@@ -95,6 +95,10 @@ function dibujarArbolVisual(pasos){
     </svg>`;
 }
 
+function nActual(){
+  return hist[hist.length-1];
+}
+
 function mNodo(){
   const nodo = nActual();
   const esFin = !!nodo.fin;
@@ -116,7 +120,22 @@ function mNodo(){
   cont.className = "";
   cont.innerHTML = "";
 
-  document.getElementById("retro").onclick = () => {
+  nodo.opc.forEach(opcion => {
+    const btn = document.createElement("button");
+    btn.textContent = opcion.titulo;
+
+    btn.onclick = () => {
+      elec[niveles[hist.length - 1]] = opcion.titulo;
+      camino.push(opcion.titulo);
+      guardarCamino();
+      hist.push(opcion.hijo);
+      mNodo();
+    };
+    cont.appendChild(btn);
+  });
+}
+
+document.getElementById("retro").onclick = () => {
   if (hist.length === 1){
     document.getElementById("contenidoArbol").style.display = "none";
     document.getElementById("inicio").style.display = "";
@@ -128,7 +147,6 @@ function mNodo(){
   guardarCamino();
   mNodo();
 };
-}
 
 async function mResultados(){
   document.getElementById("chipNivel").textContent = "RESULTADOS";

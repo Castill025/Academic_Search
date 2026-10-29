@@ -357,6 +357,47 @@ body{
   .area{ min-height:120px }
 }
 
+/* ===== Números ===== */
+body .areas{ padding-bottom:20px }
+.numeros{ position:relative; z-index:2; max-width:1400px; width:100%; margin:0 auto; padding:10px clamp(16px,3vw,48px) 110px }
+.num-caja{ display:grid; grid-template-columns:repeat(4,1fr); background:#fff; border-radius:22px; box-shadow:0 10px 30px rgba(95,109,170,.15) }
+.num-caja div{ text-align:center; padding:22px 10px; border-right:1px solid #E3EAF6 }
+.num-caja div:last-child{ border-right:0 }
+.num-caja b{ display:block; font-family:'Fraunces',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#596498 }
+.num-caja small{ font-size:14px; color:#5F6B8C }
+
+/* ===== ¿Por qué? ===== */
+.porque{ max-width:1400px; margin:0 auto; padding:56px clamp(16px,3vw,48px) 10px; text-align:center }
+.porque h2{ font-family:'Fraunces',Georgia,serif; font-size:clamp(26px,3.4vw,32px); color:#596498; margin:0 }
+.porque .lead{ color:#5F6B8C; font-size:16px; margin:6px 0 26px }
+.porque-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
+.porque-grid article{ background:#fff; border-radius:22px; padding:24px 22px; text-align:left; box-shadow:0 8px 24px rgba(95,109,170,.12) }
+.porque-grid i{ display:flex; width:46px; height:46px; border-radius:14px; align-items:center; justify-content:center; font-style:normal; font-size:22px; margin-bottom:12px }
+.porque-grid b{ display:block; font-family:'Fraunces',Georgia,serif; font-size:20px; color:#2B3558 }
+.porque-grid small{ display:block; font-size:15px; color:#5F6B8C; margin-top:6px; line-height:1.5 }
+
+/* ===== Llamado final ===== */
+.cta-final{ position:relative; overflow:hidden; max-width:1400px; margin:44px auto 70px; width:calc(100% - clamp(32px,6vw,96px));
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  border-radius:28px; padding:34px 44px; color:#fff;
+  background:linear-gradient(135deg,#7482BC,#5F6DAA) }
+.cta-final h2{ font-family:'Fraunces',Georgia,serif; font-size:clamp(24px,3vw,32px); margin:0; color:#fff }
+.cta-final p{ margin:8px 0 0; color:#E8ECFB; font-size:16px }
+.cta-der{ display:flex; align-items:center; gap:22px }
+.cta-der img{ height:110px; width:auto; margin:-20px 0 }
+.cta-boton{ background:#9BE3B4; color:#12402B; font-weight:700; padding:14px 32px; border-radius:999px; text-decoration:none; transition:transform .15s }
+.cta-boton:hover{ transform:translateY(-2px) }
+.cta-final::after{ content:""; position:absolute; left:-20px; bottom:-30px; width:90px; height:110px; background:rgba(255,255,255,.13); border-radius:4px 70% 4px 70% }
+
+@media (max-width:860px){
+  .num-caja{ grid-template-columns:repeat(2,1fr) }
+  .num-caja div:nth-child(2){ border-right:0 }
+  .num-caja div:nth-child(-n+2){ border-bottom:1px solid #E3EAF6 }
+  .porque-grid{ grid-template-columns:1fr }
+  .cta-final{ flex-direction:column; text-align:center; padding:28px 20px }
+  .cta-der img{ display:none }
+}
+
 #footer{
   position:relative; z-index:3; overflow:hidden; margin-top:-32px;
   background:linear-gradient(135deg,#7482BC,#5F6DAA); color:#F1F4FF;

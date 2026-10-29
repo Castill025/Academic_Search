@@ -14,6 +14,11 @@ const PASOS_TOTAL = 5;
 const etiquetas = ["NIVEL","DISCIPLINA","RAMA","TEMA","SUBTEMA"];
 let camino = [];
 
+function guardarCamino(){
+  localStorage.setItem("camino", JSON.stringify(camino));
+}
+const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
 function dibujarRuta(){
   const lista = document.getElementById("rutaLista");
   lista.innerHTML = "";

@@ -47,12 +47,40 @@
         </div>
       </section>
 
-      <div id="contenidoArbol">
-        <button id="retro" style="display:none">Atrás</button>
-        <div id="arbolVisual"></div>
-        <div id="pregunta"></div>
-        <div id="opc"></div>
-      </div>
+      <section id="contenidoArbol">
+        <div class="arbol-layout">
+           <aside class="arbol-lado">
+             <div class="tarjeta ruta">
+               <h3>Tu ruta</h3>
+               <ol class="ruta-lista" id="rutaLista"></ol>
+                <div class="avance">
+                  <div id="avanceBarra" style="width:0%"></div>
+                </div>
+
+                <small id="avanceTxt">0 de 5 pasos</small>
+                <div class="ruta-botones">
+                  <button id="retro" type="button">← Volver</button>
+                  <button id="reiniciar" type="button">↻ Reiniciar</button>
+                </div>
+              </div>
+              
+              <div class="tarjeta">
+                <h3>Tu rama en el árbol</h3>
+                <div id="arbolVisual"></div>
+              </div>
+            </aside>            
+            
+            <div class="arbol-main">
+              <div class="tarjeta rama">
+                <span class="chip" id="chipNivel">Nivel</span>
+                <div id="pregunta"></div>
+              </div>
+              
+              <h3 class="elige" id="tituloElige">Elige una opción</h3>
+              <div id="opc"></div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <section class="areas" id="areas">

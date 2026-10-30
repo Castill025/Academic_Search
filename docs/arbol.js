@@ -17,6 +17,17 @@ let camino = [];
 function guardarCamino(){
   localStorage.setItem("camino", JSON.stringify(camino));
 }
+
+function guardarBusqueda(){
+  if (!camino.length) return;
+  let h = [];
+  try { h = JSON.parse(localStorage.getItem("historial") || "[]"); } catch (e) {}
+  const clave = camino.join("|");
+  h = h.filter(x => x.camino.join("|") !== clave);   // si ya estaba, la sube al inicio
+  h.unshift({ fecha: Date.now(), camino: [...camino] });
+  localStorage.setItem("historial", JSON.stringify(h.slice(0, 50)));
+}
+
 const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 function dibujarRuta(){
@@ -149,6 +160,7 @@ document.getElementById("retro").onclick = () => {
 };
 
 async function mResultados(){
+  guardarBusqueda();
   document.getElementById("chipNivel").textContent = "RESULTADOS";
   document.getElementById("tituloElige").textContent = "Documentos encontrados";
   document.getElementById("pregunta").textContent = "Resultados hallados";

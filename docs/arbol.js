@@ -72,7 +72,6 @@ function dibujarArbolVisual(pasos){
     }
   });
 
-  // puntos por donde sube tu camino (uno por paso)
   const pts = [[150,300],[128,250],[96,205],[76,160],[64,118],[60,84]];
   const n = Math.min(pasos.length, PASOS_TOTAL);
   let ruta = "", marcas = "";

@@ -1,45 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="proyectodis.css">
-    <title>Contacto — Academic Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prueba.css">
+  <link rel="stylesheet" href="contacto.css">
+  <title>Contacto · Academic Search</title>
 </head>
 <body>
-    <nav id="navbar">
-      <div id="navLogo">Academic Search</div>
-      <div id="navLinks">
-        <a href="historial.html" id="historialBtn">Historial</a>
-        <a href="contacto.html" id="contactoBtn">Contacto</a>
+  <header class="header">
+    <a class="marca" href="index.html">
+      <span class="marca-medallon"><img src="mascota.png" alt=""></span>
+      <b class="marca-nombre">Academic <span>Search</span></b>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <div id="navlinks">
+        <a href="index.html">Inicio</a>
+        <a href="historial.html">Historial</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
       </div>
     </nav>
+  </header>
 
-    <div class="pagina"> 
-        <main class="principal">…
-        </main> <aside class="lateral">…
-        </aside> 
-    </div>
+  <main class="contacto">
 
-    <h1>Contáctanos</h1>
-    <input type="text" id="contactoNombre" placeholder="Tu nombre">
-    <textarea id="contactoMensaje" placeholder="Tu mensaje"></textarea>
-    <button id="enviarContactoBtn">Enviar</button>
+    <section class="ct-top">
+      <div class="ct-txt">
+        <span class="ct-chip">CONTACTO</span>
+        <h1>¿Hablamos?<br><span class="ct-marca">Escríbenos</span></h1>
+        <div class="ct-hoja"><i></i><b></b></div>
+        <p>Una duda, una sugerencia o un error: tu opinión nos ayuda a mejorar Academic Search.</p>
+      </div>
+      <img class="ct-masc" src="mascota.png" alt="">
+    </section>
 
-    <a href="index.html">← Volver al buscador</a>
+    <section class="ct-cols">
 
-    <footer id="footer">
-      <p>© 2026 Academic Search — Explora el conocimiento, rama por rama.</p>
-    </footer>
+      <div class="ct-datos">
+        <div class="ct-dato">
+          <i style="background:#D9F7E2">✉️</i>
+          <div><b>Correo</b><span>academicsearch@correo.com</span></div>
+        </div>
+        <div class="ct-dato">
+          <i style="background:#E3F1FB">⏱</i>
+          <div><b>Tiempo de respuesta</b><span>En 1 o 2 días hábiles</span></div>
+        </div>
+        <a class="ct-dato" href="index.html#como">
+          <i style="background:#ECEFFB">🌿</i>
+          <div><b>¿Primera vez aquí?</b><span>Mira cómo funciona el buscador</span></div>
+        </a>
+      </div>
 
-    <script>
-      document.getElementById("enviarContactoBtn").onclick = () => {
-        const nombre = document.getElementById("contactoNombre").value;
-        const mensaje = document.getElementById("contactoMensaje").value;
-        const asunto = encodeURIComponent("Contacto desde Academic Search");
-        const cuerpo = encodeURIComponent(`Nombre: ${nombre}\n\n${mensaje}`);
-        window.location.href = `mailto:tu-correo@ejemplo.com?subject=${asunto}&body=${cuerpo}`;
-      };
-    </script>
+      <div class="ct-tarjeta">
+
+        <form id="ctForm" novalidate>
+          <div class="ct-fila">
+            <label class="ct-campo">
+              <small>Tu nombre</small>
+              <input type="text" name="nombre" id="ctNombre" placeholder="Escribe tu nombre" autocomplete="name" required>
+            </label>
+            <label class="ct-campo">
+              <small>Tu correo</small>
+              <input type="email" name="correo" id="ctCorreo" placeholder="nombre@correo.com" autocomplete="email" required>
+            </label>
+          </div>
+
+          <label class="ct-campo">
+            <small>Mensaje</small>
+            <textarea name="mensaje" id="ctMensaje" rows="6" maxlength="1000" placeholder="Cuéntanos qué necesitas…" required></textarea>
+            <em class="ct-cuenta" id="ctCuenta">0 / 1000</em>
+          </label>
+
+          <!-- campo trampa contra robots: debe quedar vacío -->
+          <input type="text" name="_gotcha" id="ctTrampa" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+
+          <p class="ct-error" id="ctError" role="alert" hidden></p>
+
+          <button class="ct-enviar" id="ctEnviar" type="submit">Enviar mensaje →</button>
+        </form>
+
+        <div class="ct-ok" id="ctOk" hidden>
+          <img src="mascota.png" alt="">
+          <h2>¡Mensaje <em>enviado</em>!</h2>
+          <p>Gracias por escribirnos. Te responderemos pronto al correo que nos diste.</p>
+          <a class="comenzar" href="index.html">Volver al buscador</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="contacto.js"></script>
 </body>
 </html>

@@ -91,3 +91,44 @@ body{
     background:#F6FFF9 
 }
 
+/* ===== Historial ===== */
+[hidden]{ display:none !important }
+.hist{ width:100%; max-width:900px; margin:0 auto; padding:40px clamp(16px,3vw,32px) 70px; position:relative; z-index:2 }
+.hist h1{ font-family:'Fraunces',Georgia,serif; font-size:clamp(30px,4.4vw,44px); color:#596498; margin:0 }
+.hist h1 em{ font-style:normal; color:#1F9D6B }
+.hist-sub{ margin:6px 0 22px; color:#5F6B8C; font-size:16px }
+
+.hist-filtros{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px }
+.hist-filtros button{ border:0; cursor:pointer; background:#fff; color:#596498; font:700 14px 'DM Sans',sans-serif; padding:10px 20px; border-radius:999px; box-shadow:0 4px 12px rgba(95,109,170,.12); transition:background .15s, color .15s }
+.hist-filtros button:hover{ background:#9BE3B4; color:#12402B }
+.hist-filtros button.activo{ background:#596498; color:#fff }
+
+.hist-lista{ background:#fff; border-radius:24px; box-shadow:0 10px 30px rgba(95,109,170,.14); overflow:hidden }
+.h-fila{ display:grid; grid-template-columns:90px 1fr auto; gap:14px; align-items:center; padding:16px 22px; border-bottom:1px solid #EEF1FB }
+.h-fila:last-child{ border-bottom:0 }
+.h-fecha b{ display:block; font-size:13px; color:#596498 }
+.h-fecha span{ font-size:12px; color:#8a93b3 }
+.h-tema{ font:700 18px 'Fraunces',Georgia,serif; color:#2B3558; margin:0 0 6px }
+.h-ruta{ display:flex; flex-wrap:wrap; align-items:center; gap:4px }
+.h-chip{ border-radius:999px; padding:3px 11px; font:700 11px 'DM Sans',sans-serif; background:#9BE3B4; color:#12402B }
+.h-chip.c1{ background:#A9D4F0; color:#1F4F73 }
+.h-chip.c2{ background:#C3CCEE; color:#3E487A }
+.h-chip.c3{ background:#F6E7C8; color:#6B4E1F }
+.h-chip.c4{ background:#D9F7E2; color:#1F6B4B }
+.h-sep{ color:#8a93b3; font-size:12px }
+.h-abrir{ border:0; cursor:pointer; background:#EEF1FB; color:#596498; font:700 13px 'DM Sans',sans-serif; padding:10px 20px; border-radius:999px; transition:background .15s, transform .15s }
+.h-abrir:hover{ background:#9BE3B4; color:#12402B; transform:translateY(-2px) }
+
+.hist-vacio{ text-align:center; padding:30px 0 }
+.hist-vacio img{ height:120px }
+.hist-vacio h2{ font-family:'Fraunces',Georgia,serif; color:#596498; margin:8px 0 6px }
+.hist-vacio p{ color:#5F6B8C; max-width:340px; margin:0 auto 18px }
+
+.hist-borrar{ text-align:center; margin-top:18px }
+.hist-borrar button{ border:0; cursor:pointer; background:#fff; color:#596498; font:700 13px 'DM Sans',sans-serif; padding:10px 20px; border-radius:999px; box-shadow:0 4px 12px rgba(95,109,170,.12) }
+.hist-borrar button:hover{ background:#9BE3B4; color:#12402B }
+
+@media (max-width:600px){
+  .h-fila{ grid-template-columns:1fr auto }
+  .h-fecha{ grid-column:1 / -1; display:flex; gap:8px; align-items:baseline }
+}

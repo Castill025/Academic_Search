@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="proyectodis.css">
-    <title>Historial — Academic Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prueba.css">
+  <link rel="stylesheet" href="Dhistorial.css">
+  <title>Historial · Academic Search</title>
 </head>
 <body>
-    <nav id="navbar">
-      <div id="navLogo">Academic Search</div>
-      <div id="navLinks">
-        <a href="historial.html" id="historialBtn">Historial</a>
-        <a href="contacto.html" id="contactoBtn">Contacto</a>
+  <header class="header">
+    <a class="marca" href="index.html">
+      <span class="marca-medallon"><img src="mascota.png" alt=""></span>
+      <b class="marca-nombre">Academic <span>Search</span></b>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <div id="navlinks">
+        <a href="index.html">Inicio</a>
+        <a href="historial.html" aria-current="page">Historial</a>
+        <a href="contacto.html">Contacto</a>
       </div>
     </nav>
+  </header>
 
-    <h1>Tu historial de búsqueda</h1>
-    <div id="listaHistorial"></div>
-    <a href="index.html">← Volver al buscador</a>
+  <main class="hist">
+    <h1>Tu <em>historial</em> de búsqueda</h1>
+    <p class="hist-sub" id="hCuenta"></p>
 
-    <footer id="footer">
-      <p>© 2026 Academic Search — Explora el conocimiento, rama por rama.</p>
-    </footer>
+    <div class="hist-filtros" id="hFiltros">
+      <button class="activo" data-f="Todos">Todos</button>
+      <button data-f="Colegio">Colegio</button>
+      <button data-f="Universidad">Universidad</button>
+    </div>
 
-    <script>
-      const camino = JSON.parse(localStorage.getItem("camino") || "[]");
-      const contenedor = document.getElementById("listaHistorial");
-      contenedor.innerHTML = camino.length
-        ? "<p>" + camino.join(" → ") + "</p>"
-        : "<p>Todavía no has navegado ningún camino.</p>";
-    </script>
+    <div class="hist-lista" id="hLista"></div>
+
+    <div class="hist-vacio" id="hVacio" hidden>
+      <img src="mascota.png" alt="">
+      <h2>Aún no hay caminos por aquí</h2>
+      <p>Cuando explores un área y llegues a los resultados, tu camino se guardará aquí.</p>
+      <a class="comenzar" href="index.html">Empezar a explorar</a>
+    </div>
+
+    <div class="hist-borrar"><button id="hBorrar" type="button">🗑 Borrar historial</button></div>
+  </main>
+
+  <!-- aquí pega el mismo <footer id="footer"> ... </footer> de tu index.html -->
+
+  <script src="historial.js"></script>
 </body>
 </html>

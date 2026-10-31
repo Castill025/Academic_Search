@@ -1,0 +1,30 @@
+/* ===== Acerca de ===== */
+body.pg-acerca{ background:#fff }
+.acerca{ width:100%; max-width:860px; margin:0 auto; padding:20px clamp(16px,4vw,40px) 40px; position:relative; z-index:2 }
+
+.ac-sec{ text-align:center; padding:clamp(34px,6vw,56px) 0; border-top:1px solid #DDE3F0 }
+.ac-sec:first-child{ border-top:0 }
+.ac-k{ display:block; font:700 12px 'DM Sans',sans-serif; letter-spacing:.2em; color:#1F9D6B; margin-bottom:16px }
+
+.ac-hero h1{ font-family:'Fraunces',Georgia,serif; font-size:clamp(36px,6vw,58px); line-height:1.1; color:#596498; margin:0 }
+.ac-hero em{ font-style:normal; color:#1F9D6B }
+.ac-raya{ display:block; width:54px; height:3px; background:#9BE3B4; border-radius:3px; margin:20px auto }
+.ac-hero p{ max-width:460px; margin:0 auto; color:#5F6B8C; font-size:17px; line-height:1.6 }
+
+.ac-mision{ font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:clamp(22px,3.4vw,30px); line-height:1.45; color:#2B3558; max-width:680px; margin:0 auto }
+.ac-mision b{ color:#596498 }
+
+.ac-pasos,.ac-vals{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; text-align:left; max-width:720px; margin:0 auto }
+.ac-pasos>div{ border-top:2px solid #596498; padding-top:14px }
+.ac-pasos em{ display:block; font:700 28px 'Fraunces',Georgia,serif; font-style:normal; color:#C3CCEE }
+.ac-vals>div{ border-bottom:2px solid #9BE3B4; padding-bottom:16px }
+.ac-pasos b,.ac-vals b{ display:block; font:700 18px 'Fraunces',Georgia,serif; color:#2B3558; margin:4px 0 6px }
+.ac-pasos span,.ac-vals span{ color:#5F6B8C; font-size:15px; line-height:1.55 }
+
+.ac-txt{ color:#5F6B8C; font-size:17px; line-height:1.6; max-width:520px; margin:0 auto }
+.ac-btn{ display:inline-block; margin-top:22px; background:#596498; color:#fff; font:700 15px 'DM Sans',sans-serif; padding:13px 28px; border-radius:8px; text-decoration:none }
+.ac-btn:hover{ background:#4a5585 }
+
+@media (max-width:640px){
+  .ac-pasos,.ac-vals{ grid-template-columns:1fr; gap:22px }
+}

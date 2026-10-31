@@ -6,7 +6,10 @@ app.use(cors());
 const mibd=new lsql("DB_Buscador.db");
 
 app.get("/api/Contenido",(req,res)=>{
-  const{nivel,area,materia,tema,subtema}=req.query;
+  const q=req.query;
+  const nivel=q.nivel, tema=q.tema, subtema=q.subtema;
+  const area=q.area ?? q.disciplina;
+  const materia=q.materia ?? q.rama;
 
   const campos = { nivel, area, materia, tema, subtema };
   const condiciones = [];

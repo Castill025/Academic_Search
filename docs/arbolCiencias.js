@@ -26,5 +26,29 @@ const arbolCiencias = {
         ]
       }
     },
+    { titulo: "Anatomía Humana",
+      hijo: {
+        pregunta: "¿Qué tema buscas?",
+        opc: [
+          { titulo: "Nutrición Humana", 
+            hijo: {
+              pregunta: "¿Qué subtema buscas?",
+              opc: [
+                { titulo: "Piramide Saludable", hijo: { fin: true } },
+              ]
+            }
+          },
+          { titulo: "El Sistema Cardiovascular", 
+            hijo: {
+              pregunta: "¿Qué subtema buscas?",
+              opc: [
+                { titulo: "Anatomía del Corazón", hijo: { fin: true } },
+                { titulo: "Componentes de la Sangre", hijo: { fin: true } },
+              ]
+            }
+          },
+        ]
+      }
+    },
   ]
 };

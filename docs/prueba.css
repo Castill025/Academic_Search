@@ -503,6 +503,12 @@ body .areas{ padding-bottom:20px }
 }
 @media (max-width:520px){ #opc{ grid-template-columns:1fr } }
 
+.por-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; max-width:1000px; margin:24px auto 0 }
+.por-item{ background:#fff; border-radius:46px; box-shadow:0 8px 22px rgba(89,100,152,.13); padding:28px 28px; text-align:center }
+.por-item b{ display:block; font-family:'Fraunces',Georgia,serif; font-size:20px; color:#2B3558 }
+.por-item span{ display:block; margin-top:8px; color:#5F6B8C; font-size:14px; line-height:1.5 }
+@media (max-width:760px){ .por-grid{ grid-template-columns:1fr } }
+
 #footer{
   position:relative; z-index:3; overflow:hidden; margin-top:-32px;
   background:linear-gradient(135deg,#7482BC,#5F6DAA); color:#F1F4FF;

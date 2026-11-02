@@ -13,6 +13,14 @@ const arbolAdmin = {
               ]
             }
           },
+          { titulo: "Planeación Estratégica", 
+            hijo: { 
+              pregunta: "¿Qué subtema buscas?", 
+              opc: [
+                { titulo: "Estrategía Proscpectiva", hijo: { fin: true } },
+              ]
+            }
+          },
         ]
       }
     },
@@ -20,12 +28,12 @@ const arbolAdmin = {
       hijo: {
         pregunta: "¿Qué tema buscas?",
         opc: [
-          { titulo: "Metodologías de Innovación", 
+          { titulo: "Metodologías Para La Innovación", 
             hijo: { 
               pregunta: "¿Qué subtema buscas?", 
               opc: [
                 { titulo: "Design Thinking", hijo: { fin: true } },
-                { titulo: "Metodología Lean Startup", hijo: { fin: true } },
+                { titulo: "Metodología Lean StartUp", hijo: { fin: true } },
               ]
             }
           },

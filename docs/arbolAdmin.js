@@ -16,5 +16,21 @@ const arbolAdmin = {
         ]
       }
     },
+    { titulo: "Innovación y Emprendimiento", 
+      hijo: {
+        pregunta: "¿Qué tema buscas?",
+        opc: [
+          { titulo: "Metodologías de Innovación", 
+            hijo: { 
+              pregunta: "¿Qué subtema buscas?", 
+              opc: [
+                { titulo: "Design Thinking", hijo: { fin: true } },
+                { titulo: "Metodología Lean Startup", hijo: { fin: true } },
+              ]
+            }
+          },
+        ]
+      }
+    },
   ]
 }

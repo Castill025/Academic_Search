@@ -2,8 +2,12 @@ const CLAVE = "historial";
 let filtro = "Todos";
 
 function leer(){
-  try { return JSON.parse(localStorage.getItem(CLAVE) || "[]"); }
-  catch (e) { return []; }
+  try {
+    const datos = JSON.parse(localStorage.getItem(CLAVE) || "[]");
+    return Array.isArray(datos)
+      ? datos.filter(e => e && Array.isArray(e.camino) && e.camino.length)
+      : [];
+  } catch (e) { return []; }
 }
 
 function cuando(ts){
